@@ -6,7 +6,7 @@ use FutureOriented\FlysystemAzureAdapter\AzureAdapter;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
 use League\Flysystem\Filesystem;
-use MicrosoftAzure\Storage\Common\ServicesBuilder;
+use MicrosoftAzure\Storage\Blob\BlobRestProxy;
 
 class AzureStorageServiceProvider extends ServiceProvider
 {
@@ -25,7 +25,7 @@ class AzureStorageServiceProvider extends ServiceProvider
                 $config['blob-endpoint']
             );
 
-            $proxy = ServicesBuilder::getInstance()->createBlobService($connectionString);
+            $proxy = BlobRestProxy::createBlobService($connectionString);
 
             return new Filesystem(new AzureAdapter($proxy, $config['container']));
         });
