@@ -1,5 +1,5 @@
 {
-  "name": "futureoriented/laravel-flysystem-azure",
+  "name": "akayaman/laravel-flysystem-azure",
   "description": "Laravel Azure storage service provider",
   "keywords": [
     "laravel",
@@ -8,14 +8,14 @@
   ],
   "authors": [
     {
-      "name": "wbswjc",
-      "email": "me@wujunchao.com"
-    }
+      "name": "NAKAYAMA Atsushi",
+      "email": "anaka@yo.rim.or.jp"
+}
   ],
   "license": "MIT",
   "require": {
     "php": ">=5.6.4",
-    "futureoriented/flysystem-azure-adapter": "~1.0.0",
+    "akayaman/flysystem-azure-adapter": "~1.0.0.3",
     "illuminate/support": "5.3.* || 5.4.* || 5.5.*"
   },
   "autoload": {
